@@ -1,16 +1,16 @@
 import { motion } from 'framer-motion'
 
 const HEADLINES = [
-  'Air Canada chatbot issued false bereavement policy — airline held liable  ///  ',
+  'Air Canada chatbot issued false bereavement policy, airline held liable  ///  ',
   'NYC lawyers fined $5,000 for citing ChatGPT hallucinated case law  ///  ',
   'Amazon AI hiring tool discriminated against women for four years  ///  ',
   'Belgian man died by suicide after AI chatbot encouraged him  ///  ',
   'ChatGPT fabricated sexual misconduct allegation against law professor  ///  ',
-  'Google autocomplete defamed man as corrupt — €25,000 court award  ///  ',
+  'Google autocomplete defamed man as corrupt: €25,000 court award  ///  ',
   'Italy banned ChatGPT over GDPR violations and hallucinated records  ///  ',
   'ChatGPT invented criminal record for Australian mayor Brian Hood  ///  ',
   'AI diagnostic tool misdiagnosed Black patients at significantly higher rates  ///  ',
-  'EU AI Act establishes zero general duty for AI to tell the truth — Wachter et al., 2024  ///  ',
+  'EU AI Act establishes zero general duty for AI to tell the truth (Wachter et al., 2024)  ///  ',
 ]
 
 const TICKER_TEXT = HEADLINES.join('') + HEADLINES.join('')
@@ -83,7 +83,7 @@ export default function Hero() {
             color: '#444',
           }}
         >
-          EDHEC GMBA — APRIL 2026
+          EDHEC GMBA / APRIL 2026
         </span>
       </motion.div>
 
@@ -153,9 +153,8 @@ export default function Hero() {
                 lineHeight: 1.6,
               }}
             >
-              When AI systems fabricate facts, discriminate, and cause real harm —
-              who bears the legal and moral burden? An investigation into the accountability
-              crisis at the heart of artificial intelligence.
+              When AI systems fabricate facts, discriminate, and cause real harm,
+              who bears the legal and moral burden?
             </p>
           </motion.div>
         </motion.div>
@@ -245,7 +244,7 @@ export default function Hero() {
               textAlign: 'right',
             }}
           >
-            AI Innovation Track — Risks, Limitations &amp; Ethical Considerations of AI
+            AI Innovation Track: Risks, Limitations &amp; Ethical Considerations of AI
             <br />
             Prof. M. Sisto, EDHEC GMBA
           </p>

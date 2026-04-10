@@ -34,7 +34,7 @@ const stats = [
     display: '$4.45M',
     label: 'Average cost of an AI-related data breach in 2023',
     source: 'IBM Cost of Data Breach Report, 2023',
-    note: 'AI systems trained on sensitive data create unprecedented liability exposure when they fail or are manipulated.',
+    note: 'AI systems trained on sensitive data create unprecedented liability exposure when they fail.',
   },
   {
     number: 0,
@@ -43,16 +43,16 @@ const stats = [
     display: '0',
     label: 'Legal provisions creating a general duty for AI to tell the truth in EU law',
     source: 'Wachter, Mittelstadt & Russell, 2024',
-    note: '"There is currently no general duty to tell the truth in EU law that applies to LLMs." — the most alarming gap in the entire regulatory framework.',
+    note: '"There is currently no general duty to tell the truth in EU law that applies to LLMs." The most alarming gap in the regulatory framework.',
   },
   {
     number: 2027,
     prefix: '',
     suffix: '',
     display: '2027',
-    label: 'Year the EU AI Act becomes fully enforceable — three years after deployment exploded',
-    source: 'EU AI Act, 2024 — Implementation Timeline',
-    note: 'Regulators are perpetually three years behind the technology they are supposed to govern. The enforcement vacuum is not theoretical — it is ongoing.',
+    label: 'Year the EU AI Act becomes fully enforceable, three years after deployment exploded',
+    source: 'EU AI Act, 2024 Implementation Timeline',
+    note: 'Regulators are perpetually three years behind the technology they govern. The enforcement vacuum is ongoing.',
   },
 ]
 
@@ -86,7 +86,7 @@ export default function TheProblem() {
           animate={inView ? 'show' : 'hidden'}
           style={{ marginBottom: 80 }}
         >
-          <span className="section-label">01 — The Problem</span>
+          <span className="section-label">01 / The Problem</span>
           <h2
             style={{
               fontFamily: "'Bebas Neue', sans-serif",
@@ -110,10 +110,9 @@ export default function TheProblem() {
               fontStyle: 'italic',
             }}
           >
-            AI systems are deployed across healthcare, law, finance, and hiring —
-            yet no coherent legal framework assigns responsibility when they fail.
-            Foundation model providers blame deployers. Deployers blame users.
-            Regulators arrive years late. Victims have no recourse.
+            AI systems are deployed across healthcare, law, finance, and hiring,
+            yet no legal framework assigns responsibility when they fail.
+            Everyone points to someone else. Victims have no recourse.
           </p>
         </motion.div>
 
@@ -137,9 +136,9 @@ export default function TheProblem() {
               lineHeight: 1.75,
             }}
           >
-            "The liability chain for AI harms is uniquely diffuse: the entity that creates the
-            model did not deploy it; the entity that deployed it did not write the harmful output;
-            the output that caused harm cannot be traced to any single decision."
+            "The entity that creates the model did not deploy it. The entity that deployed it
+            did not write the harmful output. The output that caused harm cannot be traced
+            to any single decision."
           </p>
           <p
             style={{
@@ -150,7 +149,7 @@ export default function TheProblem() {
               marginTop: 16,
             }}
           >
-            CORE ACCOUNTABILITY PROBLEM — AI ETHICS LITERATURE
+            CORE ACCOUNTABILITY PROBLEM
           </p>
         </motion.div>
 

@@ -5,21 +5,21 @@ const recommendations = [
   {
     number: '01',
     title: 'Legislate a Duty to Signal Uncertainty',
-    body: 'The EU must introduce a statutory obligation — applicable to all GPAI models and their deployers — requiring that AI systems communicate epistemic uncertainty when making factual claims in high-stakes contexts (legal, medical, financial, civic). This duty does not require AI systems to be accurate; it requires them to be honest about their confidence level. Wachter et al. model this on existing "duty to warn" frameworks in product safety law. The standard should be: if a reasonable user would alter their behaviour based on the output, the output must carry a calibrated uncertainty signal.',
+    body: 'The EU must require all GPAI models and deployers to communicate epistemic uncertainty in high-stakes contexts: legal, medical, financial, civic. This does not require AI to be accurate, only honest about confidence. Modelled on existing "duty to warn" frameworks: if a reasonable user would alter their behaviour based on the output, the output must carry an uncertainty signal.',
     source: 'Wachter, Mittelstadt & Russell (2024); EU AI Act Gap Analysis',
     urgent: true,
   },
   {
     number: '02',
     title: 'Mandatory, Named Accountability Chains',
-    body: 'The EU AI Act\'s category-level accountability (deployers are responsible) must be supplemented with individual-level accountability requirements aligned with Microsoft RAI Standard Goal A1. Every AI system deployed in a consequential context must register: the named accountability officer, the impact assessment date and findings, the monitoring protocol, and the incident response pathway. This registry must be public for all systems affecting consumer decisions. The Air Canada case demonstrates that institutional accountability without named individuals produces corporate buck-passing. Individual accountability creates individual incentives for responsible deployment.',
-    source: 'Microsoft Responsible AI Standard v2, Goals A1 & A5; EU AI Act Articles 16–29',
+    body: 'Category-level accountability must be supplemented with named individuals. Every consequential AI system must register: the accountability officer, impact assessment findings, monitoring protocol, and incident response pathway. Air Canada showed that institutional accountability without named individuals produces buck-passing.',
+    source: 'Microsoft Responsible AI Standard v2, Goals A1 & A5; EU AI Act Articles 16-29',
     urgent: true,
   },
   {
     number: '03',
     title: 'Close the Gap: EU AI Liability Directive Must Be Adopted',
-    body: 'The AI Liability Directive must be accelerated, strengthened, and adopted. The current draft\'s rebuttable presumption of causation is a necessary but insufficient start. It must be extended to general-purpose AI harms — not limited to high-risk AI categories. The revised Product Liability Directive\'s "defect" definition must be amended to encompass epistemic defects: outputs that create false impressions through hallucination, incompleteness, or the absence of uncertainty signals. A dedicated AI harm redress mechanism — analogous to the Consumer Financial Protection Bureau — should be established at EU level with technical expertise and enforcement powers.',
+    body: 'The AI Liability Directive must be adopted and extended to general-purpose AI harms, not just high-risk categories. The Product Liability Directive\'s "defect" definition must encompass epistemic defects: outputs that create false impressions through hallucination or absent uncertainty signals. A dedicated AI harm redress mechanism should be established at EU level.',
     source: 'EU AI Liability Directive Draft (2022); Revised Product Liability Directive (2024); Wachter et al. (2024)',
     urgent: false,
   },
@@ -37,8 +37,8 @@ const sources = [
   'Reuters (2018). "Amazon scraps secret AI recruiting tool that showed bias against women." October 10, 2018.',
   'La Libre Belgique (2023). "Il s\'est suicidé après des semaines de conversation avec un chatbot." March 28, 2023.',
   'The Washington Post (2023). "ChatGPT invented a sexual harassment scandal and named a real law professor as the accused." April 5, 2023.',
-  'Österreichischer Oberster Gerichtshof / Bundesgerichtshof (2021). Google Autocomplete Defamation Cases — Austrian and German Courts.',
-  'Turley, J. (2023). "ChatGPT made me a liar — I need AI accountability." USA Today. Op-Ed.',
+  'Österreichischer Oberster Gerichtshof / Bundesgerichtshof (2021). Google Autocomplete Defamation Cases, Austrian and German Courts.',
+  'Turley, J. (2023). "ChatGPT made me a liar: I need AI accountability." USA Today. Op-Ed.',
   'Mehta, N. (2026). First-person documented interaction with Claude Sonnet 4.6. LinkedIn. April 2026.',
   'MIT Technology Review (2023). "The problem of AI hallucinations in high-stakes settings." Editorial.',
 ]
@@ -54,7 +54,7 @@ export default function Verdict() {
       ref={ref}
       style={{ background: '#0a0a0a', borderTop: '2px solid #C0392B' }}
     >
-      {/* Verdict header — full bleed */}
+      {/* Verdict header, full bleed */}
       <div
         style={{
           padding: '120px 56px 80px',
@@ -86,7 +86,7 @@ export default function Verdict() {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
           >
-            <span className="section-label">08 — Verdict</span>
+            <span className="section-label">08 / Verdict</span>
             <h2
               style={{
                 fontFamily: "'Bebas Neue', sans-serif",
@@ -120,11 +120,10 @@ export default function Verdict() {
                     fontStyle: 'italic',
                   }}
                 >
-                  AI systems are already speaking with the authority of experts.
-                  They are advising patients, informing jurors, screening job applicants,
-                  and comforting the grieving. They are doing this without a duty to tell
-                  the truth, without named accountability, and without adequate redress
-                  when they fail.
+                  AI systems already speak with the authority of experts: advising
+                  patients, informing jurors, screening applicants, comforting the
+                  grieving. Without a duty to tell the truth, without named
+                  accountability, without redress when they fail.
                 </p>
               </div>
               <div>
@@ -136,12 +135,9 @@ export default function Verdict() {
                     lineHeight: 1.8,
                   }}
                 >
-                  The cases documented in this report are not accidents — they are the
-                  predictable output of a system in which the incentive to deploy is vastly
-                  stronger than the incentive to be careful. The regulatory response so far
-                  has been to document the risk tiers, mandate the impact assessments,
-                  and wait for enforcement until 2027. Three concrete interventions would
-                  change the equation.
+                  These cases are not accidents. They are the predictable output of a
+                  system where the incentive to deploy vastly exceeds the incentive to
+                  be careful. Three concrete interventions would change the equation.
                 </p>
               </div>
             </div>
@@ -358,7 +354,7 @@ export default function Verdict() {
                 marginTop: 12,
               }}
             >
-              AI Innovation Track — Risks, Limitations &amp; Ethical Considerations of AI
+              AI Innovation Track: Risks, Limitations &amp; Ethical Considerations of AI
               <br />
               Prof. M. Sisto &nbsp;·&nbsp; EDHEC GMBA &nbsp;·&nbsp; April 2026
             </p>

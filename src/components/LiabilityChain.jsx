@@ -9,13 +9,13 @@ const nodes = [
     sublabel: 'OpenAI · Anthropic · Google DeepMind · Meta',
     color: '#C0392B',
     detail: {
-      role: 'Creates the base large language model — the training data, architecture, RLHF fine-tuning, and safety guardrails.',
+      role: 'Creates the base large language model, including training data, architecture, RLHF fine-tuning, and safety guardrails.',
       obligations: [
-        'EU AI Act Article 53: GPAI providers must maintain technical documentation, register with EU database, and publish training data summaries.',
-        'Models with "systemic risk" (>10²⁵ FLOPs) face heightened obligations: adversarial testing, incident reporting, cybersecurity measures.',
+        'EU AI Act Article 53: GPAI providers must maintain technical documentation and publish training data summaries.',
+        'Models with "systemic risk" (>10²⁵ FLOPs) face heightened obligations including adversarial testing and incident reporting.',
         'Must ensure GPAI models do not generate illegal content under copyright law.',
       ],
-      gap: 'Providers cannot foresee all deployment contexts and routinely disclaim liability for third-party use. No obligation to ensure safe downstream deployment exists in the AI Act. The GPAI framework is largely self-declaratory.',
+      gap: 'Providers routinely disclaim liability for third-party use. No obligation to ensure safe downstream deployment exists. The GPAI framework is largely self-declaratory.',
       verdict: 'Partial accountability. Strong documentation requirements, weak enforcement at the point of harm.',
     },
   },
@@ -26,14 +26,14 @@ const nodes = [
     sublabel: 'Air Canada · Westlaw · Klarna · HR Platforms',
     color: '#C0392B',
     detail: {
-      role: 'Integrates the foundation model into a product or service offered to end users. Has the highest awareness of the deployment context.',
+      role: 'Integrates the foundation model into a product or service. Has the highest awareness of deployment context.',
       obligations: [
-        'EU AI Act: Deployers of high-risk AI must conduct conformity assessments, maintain logs, conduct human oversight, and report serious incidents.',
+        'EU AI Act: Deployers of high-risk AI must conduct conformity assessments, maintain logs, and report serious incidents.',
         'Must inform users when interacting with AI (Article 50 transparency obligations).',
-        'Cannot instruct providers to violate the Act — cannot outsource compliance.',
+        'Cannot instruct providers to violate the Act or outsource compliance.',
       ],
-      gap: 'Air Canada\'s failed defense — arguing the chatbot was a "separate legal entity" — illustrated how deployers attempt to externalize liability to the AI system itself. The BC Civil Resolution Tribunal firmly rejected this. However, no universal standard exists across sectors for deployer accountability.',
-      verdict: 'Highest accountability in practice. Courts are increasingly holding deployers responsible regardless of AI autonomy arguments.',
+      gap: 'Air Canada argued its chatbot was a "separate legal entity." The BC tribunal rejected this entirely. Yet no universal standard exists across sectors for deployer accountability.',
+      verdict: 'Highest accountability in practice. Courts increasingly hold deployers responsible regardless of AI autonomy arguments.',
     },
   },
   {
@@ -43,14 +43,14 @@ const nodes = [
     sublabel: 'Lawyers · Doctors · HR Managers · Journalists',
     color: '#C0392B',
     detail: {
-      role: 'Domain expert who integrates AI output into professional decisions. Possesses the knowledge to verify AI outputs — but frequently does not.',
+      role: 'Domain expert who integrates AI output into professional decisions. Has the knowledge to verify outputs, but frequently does not.',
       obligations: [
-        'Existing professional codes of conduct (bar associations, medical boards) create duties of competence that extend to tool verification.',
-        'Mata v. Avianca (2023): Judge Castel held that submitting AI-generated material without verification violated professional obligations.',
-        'Lawyers sanctioned $5,000 — precedent that professional responsibility applies to AI use.',
+        'Professional codes of conduct (bar associations, medical boards) create duties of competence that extend to tool verification.',
+        'Mata v. Avianca (2023): submitting AI-generated material without verification violated professional obligations.',
+        'Lawyers sanctioned $5,000, setting precedent that professional responsibility applies to AI use.',
       ],
-      gap: 'Automation bias — the documented tendency to over-rely on confident, authoritative-sounding AI outputs — undermines verification. Professional codes have not yet been updated to specifically address AI verification duties. The threshold for "reasonable verification" remains undefined.',
-      verdict: 'Accountability exists in theory via professional codes, but not yet formalized for AI contexts. The lawyer case is a warning shot, not settled doctrine.',
+      gap: 'Automation bias, the tendency to over-rely on confident AI outputs, undermines verification. Professional codes have not been updated for AI. The threshold for "reasonable verification" remains undefined.',
+      verdict: 'Accountability exists in theory via professional codes, but not yet formalized for AI. The lawyer case is a warning shot, not settled doctrine.',
     },
   },
   {
@@ -60,14 +60,14 @@ const nodes = [
     sublabel: 'Passengers · Patients · Job Applicants · Consumers',
     color: '#C0392B',
     detail: {
-      role: 'The final recipient of AI-mediated decisions. Often has no knowledge that AI was involved, and no means to contest the output.',
+      role: 'The final recipient of AI-mediated decisions. Often has no knowledge AI was involved and no means to contest the output.',
       obligations: [
         'Article 50 EU AI Act: Right to be informed when interacting with an AI system.',
-        'Article 86 (EU AI Act, high-risk systems): Right to explanation of individual decisions.',
+        'Article 86 (high-risk systems): Right to explanation of individual decisions.',
         'GDPR Article 22: Right not to be subject to solely automated decisions with significant effects.',
       ],
-      gap: 'These rights exist on paper. In practice: disclosures are buried in terms of service, explanations are technically opaque, and job applicants eliminated by Amazon\'s AI system had no idea AI was involved. Digital literacy gaps mean most users cannot evaluate AI reliability even when informed.',
-      verdict: 'Least accountability, most harm. Legal rights exist but are practically unenforceable without technical literacy and legal resources.',
+      gap: 'These rights exist on paper. In practice, disclosures are buried in terms of service and applicants eliminated by Amazon\'s AI had no idea AI was involved.',
+      verdict: 'Least accountability, most harm. Legal rights exist but are practically unenforceable.',
     },
   },
   {
@@ -77,14 +77,14 @@ const nodes = [
     sublabel: 'EU · FTC · ICO · National Courts',
     color: '#C0392B',
     detail: {
-      role: 'The institutional backstop — responsible for setting rules, enforcing them, and providing redress mechanisms when AI harms occur.',
+      role: 'The institutional backstop: responsible for setting rules, enforcing them, and providing redress when AI harms occur.',
       obligations: [
-        'EU AI Act: Establishes national market surveillance authorities; GPAI Office in Brussels for frontier models.',
-        'EU Product Liability Directive (revised): Extends product liability to AI software — but "defect" definition remains contested.',
-        'AI Liability Directive (draft): Would introduce rebuttable presumption of causation — still not adopted as of 2024.',
+        'EU AI Act: Establishes national surveillance authorities and a GPAI Office in Brussels for frontier models.',
+        'Revised Product Liability Directive: Extends liability to AI software, but the "defect" definition remains contested.',
+        'AI Liability Directive (draft): Would introduce rebuttable presumption of causation. Still not adopted as of 2024.',
       ],
-      gap: 'EU AI Act won\'t be fully enforceable until 2027. No global coordination exists — AI systems can be hosted in permissive jurisdictions and deployed globally. Enforcement bodies lack the technical expertise to audit black-box AI systems. The AI Liability Directive remains stalled in Council.',
-      verdict: 'Structurally inadequate. The most powerful institutional actor is also the slowest. Enforcement lags deployment by years.',
+      gap: 'EU AI Act won\'t be enforceable until 2027. No global coordination exists. Enforcement bodies lack the expertise to audit black-box systems. The AI Liability Directive remains stalled.',
+      verdict: 'Structurally inadequate. The most powerful institutional actor is also the slowest.',
     },
   },
 ]
@@ -115,7 +115,7 @@ export default function LiabilityChain() {
           animate={inView ? 'show' : 'hidden'}
           style={{ marginBottom: 72 }}
         >
-          <span className="section-label">02 — Liability Chain</span>
+          <span className="section-label">02 / Liability Chain</span>
           <h2
             style={{
               fontFamily: "'Bebas Neue', sans-serif",
@@ -138,7 +138,7 @@ export default function LiabilityChain() {
             }}
           >
             When AI causes harm, every actor in the chain points to someone else.
-            Click each node to understand their obligations — and where they fail.
+            Click each node to see their obligations and where they fail.
           </p>
         </motion.div>
 
@@ -399,7 +399,7 @@ export default function LiabilityChain() {
               fontStyle: 'italic',
             }}
           >
-            Each connector represents a handoff of responsibility — and a potential gap in accountability.
+            Each connector represents a handoff of responsibility, and a potential gap in accountability.
           </p>
         </motion.div>
       </div>

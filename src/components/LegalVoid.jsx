@@ -12,7 +12,7 @@ const laws = [
       'GPAI model transparency and documentation',
       'Article 50: Right to know you are interacting with AI',
     ],
-    gap: 'Zero provision for a general duty to tell the truth. Hallucinations, fabricated citations, and confabulated explanations are not defined as prohibited practices. The Act addresses risk categories, not epistemic accuracy. No enforcement mechanism exists for factual reliability.',
+    gap: 'Zero provision for a duty to tell the truth. Hallucinations and fabricated citations are not prohibited practices. The Act addresses risk categories, not factual accuracy.',
     gapScore: 'CRITICAL GAP',
   },
   {
@@ -24,7 +24,7 @@ const laws = [
       'Manufacturers liable for defective products causing damage',
       'Burden of proof shifted to defendant in some circumstances',
     ],
-    gap: '"Defect" under PLD means a safety defect — not an accuracy defect. A chatbot that generates a fabricated legal citation is not "defective" under PLD unless it poses a physical safety risk. Information harms are systematically excluded. The definition of damage explicitly excludes pure economic loss in most member states.',
+    gap: '"Defect" means a safety defect, not an accuracy defect. A chatbot fabricating legal citations is not "defective" unless it poses physical safety risk. Information harms are systematically excluded.',
     gapScore: 'MAJOR GAP',
   },
   {
@@ -36,7 +36,7 @@ const laws = [
       'Right to access evidence from AI developers and deployers',
       'Disclosure obligations before litigation',
     ],
-    gap: 'As of 2024, this directive remains a draft — not adopted. The Council of the EU has not reached agreement. Even if adopted, the rebuttable presumption only applies to high-risk AI as defined by the AI Act. LLM hallucinations in general-purpose contexts fall outside this scope.',
+    gap: 'As of 2024, this directive remains a draft. The Council has not reached agreement. Even if adopted, the presumption only applies to high-risk AI. LLM hallucinations fall outside this scope.',
     gapScore: 'NOT ADOPTED',
   },
   {
@@ -48,7 +48,7 @@ const laws = [
       'Transparency requirements for algorithmic recommenders',
       'Risk assessments for systemic risks from largest platforms',
     ],
-    gap: 'DSA covers illegal content — not inaccurate AI output. Hallucinations, fabricated citations, and defamatory AI speech are not illegal in themselves. The DSA has no mechanism to address the epistemic harms caused by LLM careless speech. It was designed for user-generated content, not AI-generated content.',
+    gap: 'DSA covers illegal content, not inaccurate AI output. Hallucinations and defamatory AI speech are not illegal in themselves. It was designed for user-generated content, not AI-generated content.',
     gapScore: 'WRONG INSTRUMENT',
   },
 ]
@@ -70,7 +70,7 @@ export default function LegalVoid() {
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
           style={{ marginBottom: 72 }}
         >
-          <span className="section-label">05 — The Legal Void</span>
+          <span className="section-label">05 / The Legal Void</span>
           <h2
             style={{
               fontFamily: "'Bebas Neue', sans-serif",
@@ -101,9 +101,9 @@ export default function LegalVoid() {
                 fontStyle: 'italic',
               }}
             >
-              "There is currently no general duty to tell the truth in EU law that applies
-              to LLMs or their operators. Neither the EU AI Act, nor product liability law,
-              nor any sector-specific regulation creates such an obligation."
+              "There is currently no general duty to tell the truth in EU law that
+              applies to LLMs or their operators. No existing regulation creates
+              such an obligation."
             </p>
             <p
               style={{
@@ -114,7 +114,7 @@ export default function LegalVoid() {
                 marginTop: 16,
               }}
             >
-              WACHTER, MITTELSTADT & RUSSELL — "DO LLMS HAVE A LEGAL DUTY TO TELL THE TRUTH?" 2024
+              WACHTER, MITTELSTADT & RUSSELL, 2024
             </p>
           </div>
         </motion.div>
@@ -337,12 +337,11 @@ export default function LegalVoid() {
               fontStyle: 'italic',
             }}
           >
-            Wachter et al. conclude that the EU's existing legislative landscape creates a
-            "patchwork of incomplete obligations" where AI systems can cause significant epistemic
-            harm — fabricating facts, defaming individuals, misleading professionals — without
-            triggering any specific legal liability. The accountability gap is not a drafting
-            oversight: it reflects the fundamental difficulty of applying pre-digital legal
-            concepts to a technology that speaks with authority it does not possess.
+            Wachter et al. conclude that the EU's legislative landscape creates a
+            "patchwork of incomplete obligations" where AI can fabricate facts, defame individuals,
+            and mislead professionals without triggering legal liability. The gap reflects the
+            difficulty of applying pre-digital law to a technology that speaks with authority
+            it does not possess.
           </p>
         </motion.div>
       </div>

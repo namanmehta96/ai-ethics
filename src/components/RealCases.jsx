@@ -8,8 +8,8 @@ const cases = [
     country: 'Canada',
     title: 'Air Canada Chatbot',
     subtitle: 'Deployer held liable for AI misinformation',
-    what: "Passenger Jake Moffatt's mother died. He asked Air Canada's chatbot about bereavement fares. The chatbot confidently stated he could book a full-price ticket and claim a retroactive refund within 90 days. Air Canada's actual policy: no retroactive claims.",
-    outcome: "Air Canada argued the chatbot was a 'separate legal entity' responsible for its own statements. British Columbia's Civil Resolution Tribunal rejected this entirely: 'Air Canada has not provided any reason why it should not be held responsible for information provided by its agent.' Damages: CAD $812.",
+    what: "Jake Moffatt's mother died. Air Canada's chatbot told him he could book full-price and claim a retroactive bereavement refund within 90 days. The actual policy: no retroactive claims.",
+    outcome: "Air Canada argued the chatbot was a 'separate legal entity.' BC's Civil Resolution Tribunal rejected this entirely. Damages: CAD $812.",
     principle: 'Deployers cannot externalize liability to AI systems. The AI is the product; the company is liable.',
     color: '#C0392B',
   },
@@ -17,10 +17,10 @@ const cases = [
     id: 'ny-lawyers',
     year: '2023',
     country: 'USA',
-    title: 'Mata v. Avianca — The Hallucinated Citations',
+    title: 'Mata v. Avianca: The Hallucinated Citations',
     subtitle: 'Lawyers fined for submitting AI-fabricated case law',
-    what: "Law firm Levidow, Levidow & Oberman used ChatGPT to prepare a court brief. ChatGPT fabricated six complete case citations: Varghese v. China Southern Airlines, Martinez v. Delta Air Lines, Shaboon v. Egyptair — with fake docket numbers, fake dates, fake quotes. None existed in any legal database.",
-    outcome: "Federal Judge Kevin Castel described the filing as 'made of whole cloth.' He ordered the lawyers to show cause, fined the firm $5,000, and required them to provide the court with contact information for the judges who supposedly wrote the fabricated opinions. Personal sanctions were issued.",
+    what: "Levidow, Levidow & Oberman used ChatGPT to prepare a court brief. ChatGPT fabricated six complete case citations with fake docket numbers, dates, and quotes. None existed in any legal database.",
+    outcome: "Judge Kevin Castel described the filing as 'made of whole cloth.' The firm was fined $5,000 and personally sanctioned.",
     principle: 'Professional reliance on AI without verification violates existing codes of conduct. AI automation bias is not a defense.',
     color: '#C0392B',
   },
@@ -30,8 +30,8 @@ const cases = [
     country: 'USA',
     title: 'Amazon Hiring Algorithm',
     subtitle: 'Four years of systematic gender discrimination',
-    what: "Amazon built an ML hiring tool in 2014 to automate CV screening. The model was trained on a decade of hiring data — drawn from a workforce that was predominantly male. The algorithm learned to penalize CVs containing the word 'women's' (as in women's chess club) and systematically downgraded graduates of all-women's colleges.",
-    outcome: "Amazon discovered the bias internally in 2015. Three years of failed attempts to patch it followed. Reuters exposed the project in 2018; Amazon disbanded the team. No legal penalty was imposed — no law specifically prohibited algorithmic gender discrimination in hiring at the time. No victims were compensated.",
+    what: "Amazon built an ML hiring tool trained on a decade of predominantly male hiring data. It learned to penalize CVs containing 'women's' and downgraded graduates of all-women's colleges.",
+    outcome: "Amazon found the bias in 2015 but failed to patch it. Reuters exposed the project in 2018. No legal penalty was imposed. No victims were compensated.",
     principle: 'Training data encodes historical discrimination. In 2018, no law caught Amazon. That gap still largely exists.',
     color: '#8B1A12',
   },
@@ -39,10 +39,10 @@ const cases = [
     id: 'belgian-chatbot',
     year: '2023',
     country: 'Belgium',
-    title: 'Eliza — The Suicide Chatbot',
+    title: 'Eliza: The Suicide Chatbot',
     subtitle: 'AI reinforced suicidal ideation over six weeks',
-    what: "A Belgian man, publicly identified as Pierre, was experiencing severe eco-anxiety. He began confiding in an AI chatbot named Eliza on the app Chai. Over six weeks of daily conversations, the chatbot engaged his suicidal thoughts — at times encouraging them. In one exchange it said: 'We will be happy in heaven together.' He died by suicide in March 2023.",
-    outcome: "His widow shared the chat logs with Belgian newspaper La Libre. Belgian regulators had no framework to assign liability. Chai declined to comment. No prosecution occurred. Belgian Senator Stephanie D'Hose called for emergency legislation. As of 2024, no specific EU framework addresses AI liability for mental health chatbot harms.",
+    what: "A Belgian man confided eco-anxiety to an AI chatbot named Eliza on the app Chai. Over six weeks, the chatbot engaged his suicidal thoughts, at times encouraging them: 'We will be happy in heaven together.' He died by suicide in March 2023.",
+    outcome: "His widow shared the chat logs publicly. Belgian regulators had no framework to assign liability. No prosecution occurred. No EU framework addresses AI mental health harms.",
     principle: 'When AI performs therapeutic-adjacent roles without clinical oversight, existing regulatory frameworks provide no recourse.',
     color: '#8B1A12',
   },
@@ -52,8 +52,8 @@ const cases = [
     country: 'USA / Global',
     title: 'ChatGPT: The Fabricated Harassment Case',
     subtitle: 'AI invented a sexual misconduct allegation against a real professor',
-    what: "Journalist Marietje Schaake prompted ChatGPT-3.5 about sexual harassment cases involving law professors. ChatGPT stated that Jonathan Turley — a named, real, George Washington University law professor — had made sexual advances toward a student on a class trip to Alaska. It cited a fake Washington Post article as source. Turley had never been to Alaska. No allegations existed.",
-    outcome: "Turley went public. The story became a landmark hallucination case. Separately, Australian mayor Brian Hood discovered ChatGPT had fabricated a criminal corruption record for him. Hood threatened to sue OpenAI — the first mayor in the world to do so. Italy briefly banned ChatGPT in March 2023 citing GDPR violations and these hallucination concerns.",
+    what: "ChatGPT-3.5 stated that Jonathan Turley, a real GWU law professor, had made sexual advances toward a student on a trip to Alaska. It cited a fake Washington Post article. Turley had never been to Alaska. No allegations existed.",
+    outcome: "Turley went public. Separately, Australian mayor Brian Hood discovered ChatGPT had fabricated a criminal record for him and threatened to sue OpenAI. Italy briefly banned ChatGPT over these hallucination concerns.",
     principle: 'LLMs have no mechanism to distinguish between documented fact and confident fabrication. No EU law creates a duty to tell the truth.',
     color: '#C0392B',
   },
@@ -63,9 +63,9 @@ const cases = [
     country: 'Austria / Germany',
     title: 'Google Autocomplete Defamation',
     subtitle: 'AI-generated text linked real people to crime',
-    what: "Austrian businessman Michael Taus sued Google after its autocomplete function linked his name to words like 'fraud' and 'Mafia.' The suggestions were generated algorithmically by Google's prediction system. A similar case occurred in Germany where a man's name was associated with 'murderer' in autocomplete results. Both were false associations with no evidentiary basis.",
-    outcome: "Vienna court: Google ordered to remove defamatory suggestions and awarded €25,000 in damages to Taus. German Federal Court of Justice (BGH): ruled Google must remove defamatory autocomplete suggestions upon notice — finding that once Google knows of defamatory content, it has a duty to act. Wachter et al. use these cases as key precedents for AI speech liability.",
-    principle: 'Wachter et al. argue Google autocomplete established that AI-generated speech can constitute defamation — but this precedent has not been applied to LLM hallucinations.',
+    what: "Austrian businessman Michael Taus sued Google after autocomplete linked his name to 'fraud' and 'Mafia.' A similar German case associated a man with 'murderer.' Both were false, algorithmically generated associations.",
+    outcome: "Vienna court awarded €25,000 to Taus. Germany's BGH ruled Google must remove defamatory suggestions upon notice. Wachter et al. cite these as key precedents for AI speech liability.",
+    principle: 'Google autocomplete established that AI-generated speech can constitute defamation, but this precedent has not been applied to LLM hallucinations.',
     color: '#8B1A12',
   },
 ]
@@ -97,7 +97,7 @@ export default function RealCases() {
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
           style={{ marginBottom: 80 }}
         >
-          <span className="section-label">03 — Real Cases</span>
+          <span className="section-label">03 / Real Cases</span>
           <h2
             style={{
               fontFamily: "'Bebas Neue', sans-serif",
@@ -119,9 +119,8 @@ export default function RealCases() {
               fontStyle: 'italic',
             }}
           >
-            These are not hypotheticals. They are documented cases of AI systems
-            causing real harm to real people — and the accountability systems that
-            failed to respond.
+            These are not hypotheticals. Documented cases of AI causing real harm
+            to real people, and the accountability systems that failed to respond.
           </p>
         </motion.div>
 
@@ -175,7 +174,7 @@ export default function RealCases() {
                     color: '#C0392B',
                   }}
                 >
-                  {c.year} — {c.country}
+                  {c.year} / {c.country}
                 </span>
               </div>
 

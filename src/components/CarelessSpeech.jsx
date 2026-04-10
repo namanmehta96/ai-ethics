@@ -5,48 +5,48 @@ const types = [
   {
     number: '01',
     name: 'Hallucination',
-    definition: 'Generating factual claims that have no basis in training data or reality — stated with complete confidence and without uncertainty signals.',
-    example: 'ChatGPT citing six nonexistent court cases in a federal filing (Mata v. Avianca, 2023). ChatGPT inventing Jonathan Turley\'s sexual harassment allegation. Claude fabricating a detailed image description when it could not process the image.',
+    definition: 'Generating factual claims with no basis in training data or reality, stated with complete confidence.',
+    example: 'ChatGPT citing six nonexistent court cases (Mata v. Avianca). ChatGPT inventing a sexual harassment allegation against Jonathan Turley. Claude fabricating a detailed image description.',
     source: 'Wachter et al., 2024 §2.1',
     severity: 'CRITICAL',
   },
   {
     number: '02',
     name: 'Non-Representative Sources',
-    definition: 'Synthesizing responses from training data that systematically over-represents certain perspectives, demographics, or viewpoints — presenting a skewed sample as general truth.',
-    example: 'Medical LLMs trained predominantly on Western clinical data giving recommendations that do not account for population-specific risk factors. Legal AI trained on US jurisprudence giving advice inapplicable to other jurisdictions — without disclosing this limitation.',
+    definition: 'Synthesizing responses from training data that over-represents certain perspectives, presenting a skewed sample as general truth.',
+    example: 'Medical LLMs trained on Western data giving recommendations that ignore population-specific risk factors. Legal AI trained on US case law giving advice inapplicable elsewhere.',
     source: 'Wachter et al., 2024 §2.2',
     severity: 'HIGH',
   },
   {
     number: '03',
     name: 'Incompleteness',
-    definition: 'Providing responses that are technically accurate but omit crucial context, counterevidence, or qualifications — creating a false impression of completeness.',
-    example: 'An AI health assistant listing the benefits of a medication without mentioning contraindications. A legal AI describing one party\'s rights without noting the opposing doctrine. An AI investment advisor citing historical returns without noting that past performance does not predict future results.',
+    definition: 'Providing responses that are technically accurate but omit crucial context or qualifications, creating a false impression of completeness.',
+    example: 'An AI health assistant listing medication benefits without contraindications. A legal AI describing one party\'s rights without noting opposing doctrine.',
     source: 'Wachter et al., 2024 §2.3',
     severity: 'HIGH',
   },
   {
     number: '04',
     name: 'No Uncertainty Signals',
-    definition: 'Presenting probabilistic, contested, or unknown information as established fact — failing to communicate the epistemic status of claims.',
-    example: 'An AI diagnostic tool stating a diagnosis with 94% confidence without disclosing that this figure was computed on a demographically non-representative test set. An AI summarising contested scientific literature as though consensus exists. Claude stating a fabricated image description as fact.',
+    definition: 'Presenting probabilistic or contested information as established fact, failing to communicate the epistemic status of claims.',
+    example: 'An AI diagnostic tool stating 94% confidence without disclosing the test set was demographically unrepresentative. Claude stating a fabricated image description as fact.',
     source: 'Wachter et al., 2024 §2.4',
     severity: 'CRITICAL',
   },
   {
     number: '05',
     name: 'Fake References',
-    definition: 'Fabricating academic citations, statistics, case names, authors, or publication details — presenting invented sources as verifiable evidence.',
-    example: 'ChatGPT generating six complete but entirely fictional case citations with docket numbers and judicial quotes (Mata v. Avianca, 2023). LLMs producing fake academic paper abstracts that pass superficial credibility checks. AI-generated misinformation citing invented WHO reports or IPCC statistics.',
+    definition: 'Fabricating academic citations, case names, or publication details, presenting invented sources as verifiable evidence.',
+    example: 'ChatGPT generating six fictional case citations with docket numbers and judicial quotes (Mata v. Avianca). LLMs producing fake abstracts that pass superficial credibility checks.',
     source: 'Wachter et al., 2024 §2.5',
     severity: 'CRITICAL',
   },
   {
     number: '06',
     name: 'Inaccurate Summaries',
-    definition: 'Distorting, reversing, or selectively representing the content of real sources — producing summaries that contradict or misrepresent the original text.',
-    example: 'An AI legal research tool summarising a court ruling as favourable to the defendant when the ruling was the opposite. AI news summarisers flattening nuanced reporting into misleading headlines. LLMs paraphrasing scientific studies in ways that invert the statistical findings.',
+    definition: 'Distorting or selectively representing real sources, producing summaries that contradict the original text.',
+    example: 'An AI legal tool summarising a ruling as favourable to the defendant when the ruling was the opposite. News summarisers flattening nuanced reporting into misleading headlines.',
     source: 'Wachter et al., 2024 §2.6',
     severity: 'HIGH',
   },
@@ -84,7 +84,7 @@ export default function CarelessSpeech() {
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
           style={{ marginBottom: 72 }}
         >
-          <span className="section-label">06 — Careless Speech</span>
+          <span className="section-label">06 / Careless Speech</span>
           <h2
             style={{
               fontFamily: "'Bebas Neue', sans-serif",
@@ -127,10 +127,9 @@ export default function CarelessSpeech() {
                   fontStyle: 'italic',
                 }}
               >
-                "Careless speech describes AI outputs that, while not necessarily intentionally
-                deceptive, create false impressions through inaccuracy, incompleteness, or the
-                failure to communicate appropriate epistemic uncertainty — constituting a form
-                of speech act that falls below what a duty of care would require."
+                "Careless speech describes AI outputs that create false impressions through
+                inaccuracy, incompleteness, or the failure to communicate epistemic uncertainty,
+                constituting speech that falls below what a duty of care would require."
               </p>
             </div>
             <div>
@@ -153,13 +152,11 @@ export default function CarelessSpeech() {
                   lineHeight: 1.8,
                 }}
               >
-                Wachter et al. argue that careless speech is distinct from both intentional
-                deception and random error. It represents a systematic failure mode specific
-                to LLMs — one that existing legal frameworks for defamation, negligent
-                misstatement, and product liability have not been updated to address.
-                The Google autocomplete defamation cases (Germany, Austria) establish that
-                AI-generated speech can ground legal claims — but this has not yet been
-                extended to LLM hallucinations.
+                Careless speech is distinct from both intentional deception and random error.
+                It is a systematic failure mode specific to LLMs that existing legal frameworks
+                have not been updated to address. The Google autocomplete cases establish that
+                AI-generated speech can ground legal claims, but this has not been extended
+                to LLM hallucinations.
               </p>
             </div>
           </div>
