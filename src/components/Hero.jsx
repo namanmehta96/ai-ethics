@@ -153,8 +153,7 @@ export default function Hero() {
                 lineHeight: 1.6,
               }}
             >
-              When AI makes up facts, discriminates, and causes real harm.
-              Who actually pays?
+              When AI makes up facts, discriminates, and causes real harm... who actually pays?
             </p>
           </motion.div>
         </motion.div>
