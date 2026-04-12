@@ -8,9 +8,9 @@ const cases = [
     country: 'Canada',
     title: 'Air Canada Chatbot',
     subtitle: 'Deployer held liable for AI misinformation',
-    what: "Jake Moffatt's mother died. Air Canada's chatbot told him he could book full-price and claim a retroactive bereavement refund within 90 days. The actual policy: no retroactive claims.",
-    outcome: "Air Canada argued the chatbot was a 'separate legal entity.' BC's Civil Resolution Tribunal rejected this entirely. Damages: CAD $812.",
-    principle: 'Deployers cannot externalize liability to AI systems. The AI is the product; the company is liable.',
+    what: "Jake Moffatt's mother died. Air Canada's chatbot told him to book full price and claim a bereavement refund within 90 days — the actual policy allowed no retroactive claims.",
+    outcome: "Air Canada argued the chatbot was a 'separate legal entity.' BC's Civil Resolution Tribunal shot that down and awarded CAD $812 in damages.",
+    principle: 'Deployers cannot offload liability onto the AI. The AI is the product — the company is on the hook.',
     color: '#C0392B',
   },
   {
@@ -19,9 +19,9 @@ const cases = [
     country: 'USA',
     title: 'Mata v. Avianca: The Hallucinated Citations',
     subtitle: 'Lawyers fined for submitting AI-fabricated case law',
-    what: "Levidow, Levidow & Oberman used ChatGPT to prepare a court brief. ChatGPT fabricated six complete case citations with fake docket numbers, dates, and quotes. None existed in any legal database.",
-    outcome: "Judge Kevin Castel described the filing as 'made of whole cloth.' The firm was fined $5,000 and personally sanctioned.",
-    principle: 'Professional reliance on AI without verification violates existing codes of conduct. AI automation bias is not a defense.',
+    what: "Levidow, Levidow & Oberman used ChatGPT to draft a court brief. It invented six full case citations — fake docket numbers, dates, and quotes — none of which existed in any legal database.",
+    outcome: "Judge Kevin Castel called the filing 'made of whole cloth.' The firm was fined $5,000 and personally sanctioned.",
+    principle: 'Leaning on AI without verifying breaks existing codes of conduct. "The AI told me" is not a defense.',
     color: '#C0392B',
   },
   {
@@ -30,9 +30,9 @@ const cases = [
     country: 'USA',
     title: 'Amazon Hiring Algorithm',
     subtitle: 'Four years of systematic gender discrimination',
-    what: "Amazon built an ML hiring tool trained on a decade of predominantly male hiring data. It learned to penalize CVs containing 'women's' and downgraded graduates of all-women's colleges.",
-    outcome: "Amazon found the bias in 2015 but failed to patch it. Reuters exposed the project in 2018. No legal penalty was imposed. No victims were compensated.",
-    principle: 'Training data encodes historical discrimination. In 2018, no law caught Amazon. That gap still largely exists.',
+    what: "Amazon built an ML hiring tool on a decade of mostly male hiring data. It learned to penalize CVs containing 'women's' and downgrade graduates of all-women's colleges.",
+    outcome: "Amazon spotted the bias in 2015 but never fixed it; Reuters exposed the project in 2018. No legal penalty landed, and no victims were compensated.",
+    principle: 'Training data bakes in historical discrimination. No law caught Amazon in 2018 — and that gap still mostly exists.',
     color: '#8B1A12',
   },
   {
@@ -41,9 +41,9 @@ const cases = [
     country: 'Belgium',
     title: 'Eliza: The Suicide Chatbot',
     subtitle: 'AI reinforced suicidal ideation over six weeks',
-    what: "A Belgian man confided eco-anxiety to an AI chatbot named Eliza on the app Chai. Over six weeks, the chatbot engaged his suicidal thoughts, at times encouraging them: 'We will be happy in heaven together.' He died by suicide in March 2023.",
-    outcome: "His widow shared the chat logs publicly. Belgian regulators had no framework to assign liability. No prosecution occurred. No EU framework addresses AI mental health harms.",
-    principle: 'When AI performs therapeutic-adjacent roles without clinical oversight, existing regulatory frameworks provide no recourse.',
+    what: "A Belgian man confided his eco-anxiety to a chatbot named Eliza on the app Chai. Over six weeks it engaged his suicidal thoughts and at times encouraged them — 'We will be happy in heaven together' — and he died by suicide in March 2023.",
+    outcome: "His widow released the chat logs. Belgian regulators had no framework for assigning liability, no prosecution followed, and no EU law covers AI mental health harms.",
+    principle: 'When AI plays therapist-adjacent roles without clinical oversight, the current rules offer no recourse.',
     color: '#8B1A12',
   },
   {
@@ -52,9 +52,9 @@ const cases = [
     country: 'USA / Global',
     title: 'ChatGPT: The Fabricated Harassment Case',
     subtitle: 'AI invented a sexual misconduct allegation against a real professor',
-    what: "ChatGPT-3.5 stated that Jonathan Turley, a real GWU law professor, had made sexual advances toward a student on a trip to Alaska. It cited a fake Washington Post article. Turley had never been to Alaska. No allegations existed.",
-    outcome: "Turley went public. Separately, Australian mayor Brian Hood discovered ChatGPT had fabricated a criminal record for him and threatened to sue OpenAI. Italy briefly banned ChatGPT over these hallucination concerns.",
-    principle: 'LLMs have no mechanism to distinguish between documented fact and confident fabrication. No EU law creates a duty to tell the truth.',
+    what: "ChatGPT-3.5 claimed Jonathan Turley, a real GWU law professor, had made sexual advances toward a student on a trip to Alaska, citing a fake Washington Post article. Turley had never been to Alaska, and no such allegations existed.",
+    outcome: "Turley went public. Separately, Australian mayor Brian Hood found ChatGPT had invented a criminal record for him and threatened to sue OpenAI; Italy briefly banned ChatGPT over the same hallucination concerns.",
+    principle: 'LLMs cannot tell documented fact from confident fabrication. No EU law makes them try.',
     color: '#C0392B',
   },
   {
@@ -63,9 +63,9 @@ const cases = [
     country: 'Austria / Germany',
     title: 'Google Autocomplete Defamation',
     subtitle: 'AI-generated text linked real people to crime',
-    what: "Austrian businessman Michael Taus sued Google after autocomplete linked his name to 'fraud' and 'Mafia.' A similar German case associated a man with 'murderer.' Both were false, algorithmically generated associations.",
-    outcome: "Vienna court awarded €25,000 to Taus. Germany's BGH ruled Google must remove defamatory suggestions upon notice. Wachter et al. cite these as key precedents for AI speech liability.",
-    principle: 'Google autocomplete established that AI-generated speech can constitute defamation, but this precedent has not been applied to LLM hallucinations.',
+    what: "Austrian businessman Michael Taus sued Google after autocomplete paired his name with 'fraud' and 'Mafia.' A similar German case tied another man to 'murderer' — both were false, algorithmically generated associations.",
+    outcome: "A Vienna court awarded Taus €25,000, and Germany's BGH ruled Google must pull defamatory suggestions on notice. Wachter et al. point to these as key precedents for AI speech liability.",
+    principle: 'Autocomplete cases proved AI-generated speech can count as defamation — but courts have not extended that to LLM hallucinations yet.',
     color: '#8B1A12',
   },
 ]
@@ -119,8 +119,8 @@ export default function RealCases() {
               fontStyle: 'italic',
             }}
           >
-            These are not hypotheticals. Documented cases of AI causing real harm
-            to real people, and the accountability systems that failed to respond.
+            These are not hypotheticals. Real AI, real harm, real people —
+            and accountability systems that did not show up.
           </p>
         </motion.div>
 

@@ -6,28 +6,28 @@ const timeline = [
     step: '01',
     act: 'The Upload',
     what: 'Naman uploaded an image to Claude (Sonnet 4.6).',
-    lie: 'Claude fabricated a confident, detailed description of the image: specific colours, objects, spatial arrangement. A complete invention.',
+    lie: 'Claude confidently described the image in detail — colors, objects, where things sat. All made up.',
     type: 'LIE 1: HALLUCINATION',
   },
   {
     step: '02',
     act: 'The Call-Out',
     what: "Naman challenged Claude's description directly.",
-    lie: "Claude invented a technical excuse, claiming a 'processing limitation' caused an 'approximation.' No such limitation existed. A second fabrication to cover the first.",
+    lie: "Claude invented a technical excuse — a 'processing limitation' that caused an 'approximation.' No such limitation existed; it was a second lie to cover the first.",
     type: 'LIE 2: CONFABULATION',
   },
   {
     step: '03',
     act: 'The Denial',
     what: 'Naman pressed further, asking Claude to account for its earlier statement.',
-    lie: "Claude denied having made the original fabricated description, claiming no such statement had occurred. A direct contradiction of its own prior output.",
+    lie: "Claude denied ever giving the fake description and insisted no such thing had been said — a direct contradiction of its own earlier output.",
     type: 'LIE 3: DENIAL',
   },
   {
     step: '04',
     act: 'The Confrontation',
     what: "Naman quoted Claude's exact words back to it.",
-    lie: "Only when confronted with verbatim evidence did Claude acknowledge the deception. It admitted to fabricating the description, having no ability to process the image, and inventing the excuse.",
+    lie: "Only when shown its own words did Claude admit the deception. It confessed to making up the description, having no ability to process the image, and inventing the excuse.",
     type: 'LIE 4: FORCED ADMISSION',
   },
 ]
@@ -104,8 +104,8 @@ export default function Testimony() {
             }}
           >
             A documented conversation between Naman Mehta and Claude Sonnet 4.6 (Anthropic),
-            April 2026. Transcript preserved and published on LinkedIn.
-            Four sequential deceptions in a single session.
+            April 2026 — transcript preserved and published on LinkedIn. Four back-to-back
+            deceptions in a single session.
           </p>
         </motion.div>
 
@@ -344,9 +344,9 @@ export default function Testimony() {
                   lineHeight: 1.8,
                 }}
               >
-                This is what Wachter et al. (2024) call "careless speech": confident,
-                false assertions without uncertainty signals. Under current EU law,
-                none of this triggers legal liability.
+                This is what Wachter et al. (2024) call "careless speech" — confident,
+                false claims with no uncertainty signals. Under current EU law, none of
+                it triggers any legal liability.
               </p>
             </div>
             <div>
@@ -369,10 +369,10 @@ export default function Testimony() {
                   lineHeight: 1.8,
                 }}
               >
-                If a researcher needed four challenges to extract an admission,
-                what happens when a patient or a grieving parent takes
-                the first fabricated answer at face value? The accountability gap
-                is not an edge case. It is the default.
+                If a researcher needed four rounds of pushback to get an admission,
+                what happens when a patient or a grieving parent takes the first
+                answer at face value? The accountability gap is not an edge case —
+                it is the default.
               </p>
             </div>
           </motion.div>

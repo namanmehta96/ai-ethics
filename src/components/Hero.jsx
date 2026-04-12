@@ -153,8 +153,8 @@ export default function Hero() {
                 lineHeight: 1.6,
               }}
             >
-              When AI systems fabricate facts, discriminate, and cause real harm,
-              who bears the legal and moral burden?
+              When AI makes up facts, discriminates, and causes real harm —
+              who actually pays?
             </p>
           </motion.div>
         </motion.div>

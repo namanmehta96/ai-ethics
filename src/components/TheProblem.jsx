@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from 'react'
 import { motion, useInView } from 'framer-motion'
 
-function Counter({ target, prefix = '', suffix = '', decimals = 0, duration = 2.2 }) {
+function Counter({ target, prefix = '', suffix = '', decimals = 0, duration = 2.2, group = true }) {
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-80px' })
   const [count, setCount] = useState(0)
@@ -19,9 +19,15 @@ function Counter({ target, prefix = '', suffix = '', decimals = 0, duration = 2.
     requestAnimationFrame(step)
   }, [inView, target, duration, decimals])
 
+  const formatted = decimals > 0
+    ? count.toFixed(decimals)
+    : group
+      ? Math.floor(count).toLocaleString()
+      : String(Math.floor(count))
+
   return (
     <span ref={ref}>
-      {prefix}{decimals > 0 ? count.toFixed(decimals) : Math.floor(count).toLocaleString()}{suffix}
+      {prefix}{formatted}{suffix}
     </span>
   )
 }
@@ -34,7 +40,7 @@ const stats = [
     display: '$4.45M',
     label: 'Average cost of an AI-related data breach in 2023',
     source: 'IBM Cost of Data Breach Report, 2023',
-    note: 'AI systems trained on sensitive data create unprecedented liability exposure when they fail.',
+    note: 'When AI trained on sensitive data fails, the bill gets huge fast.',
   },
   {
     number: 0,
@@ -43,7 +49,7 @@ const stats = [
     display: '0',
     label: 'Legal provisions creating a general duty for AI to tell the truth in EU law',
     source: 'Wachter, Mittelstadt & Russell, 2024',
-    note: '"There is currently no general duty to tell the truth in EU law that applies to LLMs." The most alarming gap in the regulatory framework.',
+    note: '"There is currently no general duty to tell the truth in EU law that applies to LLMs." It is the most glaring hole in the rulebook.',
   },
   {
     number: 2027,
@@ -52,7 +58,7 @@ const stats = [
     display: '2027',
     label: 'Year the EU AI Act becomes fully enforceable, three years after deployment exploded',
     source: 'EU AI Act, 2024 Implementation Timeline',
-    note: 'Regulators are perpetually three years behind the technology they govern. The enforcement vacuum is ongoing.',
+    note: 'Regulators are always three years behind the tech they police. Right now, nobody is really enforcing anything.',
   },
 ]
 
@@ -110,9 +116,9 @@ export default function TheProblem() {
               fontStyle: 'italic',
             }}
           >
-            AI systems are deployed across healthcare, law, finance, and hiring,
-            yet no legal framework assigns responsibility when they fail.
-            Everyone points to someone else. Victims have no recourse.
+            AI now runs across healthcare, law, finance, and hiring. When it
+            fails, nobody is clearly on the hook — and victims are left with
+            nowhere to turn.
           </p>
         </motion.div>
 
@@ -202,7 +208,7 @@ export default function TheProblem() {
                 ) : stat.display === '0' ? (
                   <Counter target={0} />
                 ) : (
-                  <Counter target={2027} />
+                  <Counter target={2027} group={false} />
                 )}
               </div>
 

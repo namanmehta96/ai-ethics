@@ -6,49 +6,49 @@ const goals = [
     code: 'A1',
     category: 'Accountability',
     title: 'Designated Accountability Owners',
-    description: 'Every AI system must have a named individual or team accountable for its responsible use. Accountability must be specific and traceable, not diffused.',
+    description: 'Every AI system needs a named person or team on the hook for it. Not a category, not a committee — a name.',
     practice: 'AI accountability officers; AI systems registered in a governance inventory with named owners and review cycles.',
-    contrast: 'EU AI Act assigns accountability to "deployers" as a category. Microsoft demands a named human being. The difference between institutional and individual accountability.',
+    contrast: 'The EU AI Act pins accountability on "deployers" as a category. Microsoft demands a named human — that is the gap between institutional and personal responsibility.',
   },
   {
     code: 'A5',
     category: 'Accountability',
     title: 'Human Oversight and Control',
-    description: 'Humans must be able to monitor, intervene in, and override AI decisions. No consequential AI decision should be fully autonomous.',
+    description: 'Humans must be able to watch, step in, and overrule the AI. No consequential decision should be fully automatic.',
     practice: 'Human-in-the-loop review for AI affecting employment, healthcare, legal, or customer commitments. Automated escalation when confidence drops below thresholds.',
-    contrast: 'Air Canada\'s chatbot had no human oversight and committed the company to nonexistent policies. A5 would have required human review of any commitment-making interaction.',
+    contrast: 'Air Canada\'s chatbot had zero human oversight — so it promised customers policies that did not exist. A5 would have forced a human to sign off on any interaction that made a commitment.',
   },
   {
     code: 'F3',
     category: 'Fairness',
     title: 'Impact Assessments Before Deployment',
-    description: 'Before deployment, a structured impact assessment must evaluate potential harms, including to groups underrepresented in testing data.',
+    description: 'Before launch, a structured impact assessment has to map the potential harms — including to groups barely represented in the test data.',
     practice: 'Responsible AI Impact Assessment template; mandatory red team testing; demographic parity analysis; documented misuse scenarios.',
-    contrast: 'Amazon conducted no adequate bias audit before deployment. Four years of discriminatory hiring followed. Impact assessment is a prerequisite, not a post-launch audit.',
+    contrast: 'Amazon ran no real bias audit before launch, and four years of discriminatory hiring followed. Impact assessments belong before deployment, not after the damage is done.',
   },
   {
     code: 'T2',
     category: 'Transparency',
     title: 'Epistemic Transparency Obligations',
-    description: 'AI must communicate the basis for outputs, the confidence warranted, and knowledge limitations. Users need information to evaluate AI critically.',
+    description: 'AI has to say where its answer comes from, how confident it should be, and what it does not know. Users cannot judge the output without that.',
     practice: 'Confidence scores in user-facing outputs; training data limitation disclosures; mandatory uncertainty signals for medical, legal, or contested claims.',
-    contrast: 'Wachter et al. identify absent uncertainty signals as a core careless speech failure. T2 operationalises what a legal duty to signal uncertainty would look like. EU law has no equivalent.',
+    contrast: 'Wachter et al. flag missing uncertainty signals as a core careless speech failure. T2 shows what a legal duty to signal uncertainty would actually look like — EU law has nothing like it.',
   },
   {
     code: 'RS3',
     category: 'Reliability & Safety',
     title: 'Ongoing Monitoring Post-Deployment',
-    description: 'Systems must be continuously monitored for drift, emergent harms, and misuse. Monitoring must be systematic, not reactive.',
+    description: 'Systems have to be watched continuously for drift, new harms, and misuse. Monitoring has to be built in, not bolted on after something breaks.',
     practice: 'Automated drift detection; user feedback loops with escalation; quarterly red teams on deployed systems; mandatory incident review.',
-    contrast: 'The Belgian suicide chatbot ran six weeks unmonitored. Amazon\'s algorithm ran three years after bias discovery. RS3 treats monitoring as perpetual, not optional.',
+    contrast: 'The Belgian suicide chatbot ran six weeks with nobody watching. Amazon kept its biased algorithm running three years after the problem was found — RS3 makes monitoring non-optional.',
   },
   {
     code: 'P1',
     category: 'Privacy & Security',
     title: 'Data Governance for AI Training',
-    description: 'AI must be trained only on data meeting standards of consent, representativeness, and privacy. Data governance is a precondition for trustworthy outputs.',
+    description: 'AI can only be trained on data that meets standards for consent, representativeness, and privacy. Without clean data going in, you cannot trust what comes out.',
     practice: 'Documented data provenance; consent verification for personal data; representativeness audits; prohibition on data from illegal surveillance.',
-    contrast: 'Amazon trained on biased hiring data without demographic audit. Google Autocomplete learned defamatory associations from search patterns. Neither would be permissible under P1.',
+    contrast: 'Amazon trained on biased hiring data with no demographic audit, and Google Autocomplete learned defamatory associations from search patterns. Neither would pass P1.',
   },
 ]
 
@@ -110,10 +110,10 @@ export default function MicrosoftRAI() {
                 fontStyle: 'italic',
               }}
             >
-              The Microsoft RAI Standard v2 is not law, it is a voluntary governance
-              framework. But it illustrates what adequate accountability requires:
-              named owners, mandatory assessments, ongoing monitoring, and epistemic
-              transparency.
+              Microsoft's RAI Standard v2 is not law — it is a voluntary framework the
+              company follows. But it shows what real accountability looks like: named
+              owners, mandatory assessments, ongoing monitoring, and honest signals of
+              what the model does and does not know.
             </p>
             <div>
               <p
@@ -136,9 +136,9 @@ export default function MicrosoftRAI() {
                 }}
               >
                 The EU AI Act requires "human oversight" as a general principle. Microsoft
-                specifies what that means: named individuals, confidence thresholds, mandatory
-                escalation, quarterly red teams. The distance between general principle and
-                specific practice is the distance between paper and reality.
+                spells it out — named people, confidence thresholds, mandatory escalation,
+                quarterly red teams — and that gap between principle and practice is the
+                gap between paper and reality.
               </p>
             </div>
           </div>
@@ -290,9 +290,9 @@ export default function MicrosoftRAI() {
               fontStyle: 'italic',
             }}
           >
-            The Microsoft RAI Standard v2 proves that detailed accountability frameworks
-            are achievable. The question is not whether accountability is possible.
-            It is whether it will be legally required.
+            Microsoft's RAI Standard v2 proves detailed accountability frameworks are
+            doable. The question is not whether accountability is possible — it is
+            whether it will ever be legally required.
           </p>
           <p
             style={{

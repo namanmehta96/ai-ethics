@@ -12,7 +12,7 @@ const laws = [
       'GPAI model transparency and documentation',
       'Article 50: Right to know you are interacting with AI',
     ],
-    gap: 'Zero provision for a duty to tell the truth. Hallucinations and fabricated citations are not prohibited practices. The Act addresses risk categories, not factual accuracy.',
+    gap: 'Zero provision for a duty to tell the truth. Hallucinating and inventing citations are not banned — the Act sorts AI by risk category, not by whether it is honest.',
     gapScore: 'CRITICAL GAP',
   },
   {
@@ -24,7 +24,7 @@ const laws = [
       'Manufacturers liable for defective products causing damage',
       'Burden of proof shifted to defendant in some circumstances',
     ],
-    gap: '"Defect" means a safety defect, not an accuracy defect. A chatbot fabricating legal citations is not "defective" unless it poses physical safety risk. Information harms are systematically excluded.',
+    gap: '"Defect" means a physical safety defect, not an accuracy one. A chatbot inventing case law is not "defective" unless someone gets physically hurt — information harms are shut out entirely.',
     gapScore: 'MAJOR GAP',
   },
   {
@@ -36,7 +36,7 @@ const laws = [
       'Right to access evidence from AI developers and deployers',
       'Disclosure obligations before litigation',
     ],
-    gap: 'As of 2024, this directive remains a draft. The Council has not reached agreement. Even if adopted, the presumption only applies to high-risk AI. LLM hallucinations fall outside this scope.',
+    gap: 'As of 2024 it is still a draft, with no Council agreement in sight. Even if it passes, the presumption only covers high-risk AI — LLM hallucinations sit outside the scope.',
     gapScore: 'NOT ADOPTED',
   },
   {
@@ -48,7 +48,7 @@ const laws = [
       'Transparency requirements for algorithmic recommenders',
       'Risk assessments for systemic risks from largest platforms',
     ],
-    gap: 'DSA covers illegal content, not inaccurate AI output. Hallucinations and defamatory AI speech are not illegal in themselves. It was designed for user-generated content, not AI-generated content.',
+    gap: 'The DSA targets illegal content, not inaccurate AI output. It was built for stuff users post, not for things AI invents — so hallucinations and AI defamation slip through.',
     gapScore: 'WRONG INSTRUMENT',
   },
 ]
@@ -337,11 +337,10 @@ export default function LegalVoid() {
               fontStyle: 'italic',
             }}
           >
-            Wachter et al. conclude that the EU's legislative landscape creates a
-            "patchwork of incomplete obligations" where AI can fabricate facts, defame individuals,
-            and mislead professionals without triggering legal liability. The gap reflects the
-            difficulty of applying pre-digital law to a technology that speaks with authority
-            it does not possess.
+            Wachter et al. call the EU's landscape a "patchwork of incomplete obligations" —
+            AI can invent facts, defame people, and mislead professionals with no legal
+            consequences. The problem is simple: pre-digital laws cannot govern a technology
+            that speaks with authority it has not earned.
           </p>
         </motion.div>
       </div>

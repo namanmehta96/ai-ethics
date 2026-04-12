@@ -5,7 +5,7 @@ const types = [
   {
     number: '01',
     name: 'Hallucination',
-    definition: 'Generating factual claims with no basis in training data or reality, stated with complete confidence.',
+    definition: 'Making up facts that are not in the training data or the real world, and stating them with total confidence.',
     example: 'ChatGPT citing six nonexistent court cases (Mata v. Avianca). ChatGPT inventing a sexual harassment allegation against Jonathan Turley. Claude fabricating a detailed image description.',
     source: 'Wachter et al., 2024 §2.1',
     severity: 'CRITICAL',
@@ -13,7 +13,7 @@ const types = [
   {
     number: '02',
     name: 'Non-Representative Sources',
-    definition: 'Synthesizing responses from training data that over-represents certain perspectives, presenting a skewed sample as general truth.',
+    definition: 'Pulling answers from training data skewed toward certain viewpoints, then selling that slice as the whole picture.',
     example: 'Medical LLMs trained on Western data giving recommendations that ignore population-specific risk factors. Legal AI trained on US case law giving advice inapplicable elsewhere.',
     source: 'Wachter et al., 2024 §2.2',
     severity: 'HIGH',
@@ -21,7 +21,7 @@ const types = [
   {
     number: '03',
     name: 'Incompleteness',
-    definition: 'Providing responses that are technically accurate but omit crucial context or qualifications, creating a false impression of completeness.',
+    definition: 'Giving answers that are technically true but leave out context that changes the picture.',
     example: 'An AI health assistant listing medication benefits without contraindications. A legal AI describing one party\'s rights without noting opposing doctrine.',
     source: 'Wachter et al., 2024 §2.3',
     severity: 'HIGH',
@@ -29,7 +29,7 @@ const types = [
   {
     number: '04',
     name: 'No Uncertainty Signals',
-    definition: 'Presenting probabilistic or contested information as established fact, failing to communicate the epistemic status of claims.',
+    definition: 'Stating guesses and contested claims as settled fact, with no signal of how sure or unsure the model actually is.',
     example: 'An AI diagnostic tool stating 94% confidence without disclosing the test set was demographically unrepresentative. Claude stating a fabricated image description as fact.',
     source: 'Wachter et al., 2024 §2.4',
     severity: 'CRITICAL',
@@ -37,7 +37,7 @@ const types = [
   {
     number: '05',
     name: 'Fake References',
-    definition: 'Fabricating academic citations, case names, or publication details, presenting invented sources as verifiable evidence.',
+    definition: 'Inventing citations, case names, and publication details, and dressing them up as real sources.',
     example: 'ChatGPT generating six fictional case citations with docket numbers and judicial quotes (Mata v. Avianca). LLMs producing fake abstracts that pass superficial credibility checks.',
     source: 'Wachter et al., 2024 §2.5',
     severity: 'CRITICAL',
@@ -45,7 +45,7 @@ const types = [
   {
     number: '06',
     name: 'Inaccurate Summaries',
-    definition: 'Distorting or selectively representing real sources, producing summaries that contradict the original text.',
+    definition: 'Twisting or cherry-picking real sources, so the summary ends up saying the opposite of the original.',
     example: 'An AI legal tool summarising a ruling as favourable to the defendant when the ruling was the opposite. News summarisers flattening nuanced reporting into misleading headlines.',
     source: 'Wachter et al., 2024 §2.6',
     severity: 'HIGH',
@@ -152,11 +152,9 @@ export default function CarelessSpeech() {
                   lineHeight: 1.8,
                 }}
               >
-                Careless speech is distinct from both intentional deception and random error.
-                It is a systematic failure mode specific to LLMs that existing legal frameworks
-                have not been updated to address. The Google autocomplete cases establish that
-                AI-generated speech can ground legal claims, but this has not been extended
-                to LLM hallucinations.
+                This is not lying on purpose, and it is not a random glitch. It is
+                a specific LLM failure mode that current law has not caught up with —
+                even though Google autocomplete cases already showed AI speech can ground legal claims.
               </p>
             </div>
           </div>

@@ -9,14 +9,14 @@ const nodes = [
     sublabel: 'OpenAI · Anthropic · Google DeepMind · Meta',
     color: '#C0392B',
     detail: {
-      role: 'Creates the base large language model, including training data, architecture, RLHF fine-tuning, and safety guardrails.',
+      role: 'Builds the base model — training data, architecture, fine-tuning, and safety guardrails.',
       obligations: [
         'EU AI Act Article 53: GPAI providers must maintain technical documentation and publish training data summaries.',
         'Models with "systemic risk" (>10²⁵ FLOPs) face heightened obligations including adversarial testing and incident reporting.',
         'Must ensure GPAI models do not generate illegal content under copyright law.',
       ],
-      gap: 'Providers routinely disclaim liability for third-party use. No obligation to ensure safe downstream deployment exists. The GPAI framework is largely self-declaratory.',
-      verdict: 'Partial accountability. Strong documentation requirements, weak enforcement at the point of harm.',
+      gap: 'Providers routinely disclaim liability for how others use the model. They have no duty to ensure safe downstream deployment, and most of the GPAI rulebook runs on self-reporting.',
+      verdict: 'Partial accountability. Strong documentation rules, weak enforcement where the harm actually lands.',
     },
   },
   {
@@ -26,14 +26,14 @@ const nodes = [
     sublabel: 'Air Canada · Westlaw · Klarna · HR Platforms',
     color: '#C0392B',
     detail: {
-      role: 'Integrates the foundation model into a product or service. Has the highest awareness of deployment context.',
+      role: 'Plugs the model into a product or service. Knows the most about how it is actually being used.',
       obligations: [
         'EU AI Act: Deployers of high-risk AI must conduct conformity assessments, maintain logs, and report serious incidents.',
         'Must inform users when interacting with AI (Article 50 transparency obligations).',
         'Cannot instruct providers to violate the Act or outsource compliance.',
       ],
-      gap: 'Air Canada argued its chatbot was a "separate legal entity." The BC tribunal rejected this entirely. Yet no universal standard exists across sectors for deployer accountability.',
-      verdict: 'Highest accountability in practice. Courts increasingly hold deployers responsible regardless of AI autonomy arguments.',
+      gap: 'Air Canada argued its chatbot was a "separate legal entity"; the BC tribunal threw that out. Still, no common standard exists across sectors for what deployers owe.',
+      verdict: 'Highest accountability in practice. Courts keep holding deployers responsible, no matter how autonomous the AI is said to be.',
     },
   },
   {
@@ -43,14 +43,14 @@ const nodes = [
     sublabel: 'Lawyers · Doctors · HR Managers · Journalists',
     color: '#C0392B',
     detail: {
-      role: 'Domain expert who integrates AI output into professional decisions. Has the knowledge to verify outputs, but frequently does not.',
+      role: 'The expert who folds AI output into professional decisions. Has the skills to double-check it — and often does not.',
       obligations: [
         'Professional codes of conduct (bar associations, medical boards) create duties of competence that extend to tool verification.',
         'Mata v. Avianca (2023): submitting AI-generated material without verification violated professional obligations.',
         'Lawyers sanctioned $5,000, setting precedent that professional responsibility applies to AI use.',
       ],
-      gap: 'Automation bias, the tendency to over-rely on confident AI outputs, undermines verification. Professional codes have not been updated for AI. The threshold for "reasonable verification" remains undefined.',
-      verdict: 'Accountability exists in theory via professional codes, but not yet formalized for AI. The lawyer case is a warning shot, not settled doctrine.',
+      gap: 'Automation bias — trusting confident AI too much — erodes the habit of checking. Professional codes have not been rewritten for AI, so "reasonable verification" is still anyone\'s guess.',
+      verdict: 'On paper, professional codes apply. The New York lawyer case was a warning shot, not settled law.',
     },
   },
   {
@@ -60,13 +60,13 @@ const nodes = [
     sublabel: 'Passengers · Patients · Job Applicants · Consumers',
     color: '#C0392B',
     detail: {
-      role: 'The final recipient of AI-mediated decisions. Often has no knowledge AI was involved and no means to contest the output.',
+      role: 'The person on the receiving end of the decision. Usually has no idea AI was involved and no way to push back.',
       obligations: [
         'Article 50 EU AI Act: Right to be informed when interacting with an AI system.',
         'Article 86 (high-risk systems): Right to explanation of individual decisions.',
         'GDPR Article 22: Right not to be subject to solely automated decisions with significant effects.',
       ],
-      gap: 'These rights exist on paper. In practice, disclosures are buried in terms of service and applicants eliminated by Amazon\'s AI had no idea AI was involved.',
+      gap: 'These rights exist on paper. In practice, disclosures are buried in terms of service — the applicants Amazon\'s AI cut never knew AI was involved.',
       verdict: 'Least accountability, most harm. Legal rights exist but are practically unenforceable.',
     },
   },
@@ -77,13 +77,13 @@ const nodes = [
     sublabel: 'EU · FTC · ICO · National Courts',
     color: '#C0392B',
     detail: {
-      role: 'The institutional backstop: responsible for setting rules, enforcing them, and providing redress when AI harms occur.',
+      role: 'The institutional backstop. Sets the rules, enforces them, and is supposed to provide redress when AI causes harm.',
       obligations: [
         'EU AI Act: Establishes national surveillance authorities and a GPAI Office in Brussels for frontier models.',
         'Revised Product Liability Directive: Extends liability to AI software, but the "defect" definition remains contested.',
         'AI Liability Directive (draft): Would introduce rebuttable presumption of causation. Still not adopted as of 2024.',
       ],
-      gap: 'EU AI Act won\'t be enforceable until 2027. No global coordination exists. Enforcement bodies lack the expertise to audit black-box systems. The AI Liability Directive remains stalled.',
+      gap: 'The EU AI Act is not fully enforceable until 2027, and there is no global coordination. Enforcement bodies cannot really audit black-box systems, and the AI Liability Directive is stuck in limbo.',
       verdict: 'Structurally inadequate. The most powerful institutional actor is also the slowest.',
     },
   },
@@ -137,8 +137,8 @@ export default function LiabilityChain() {
               fontStyle: 'italic',
             }}
           >
-            When AI causes harm, every actor in the chain points to someone else.
-            Click each node to see their obligations and where they fail.
+            When AI causes harm, every player in the chain points to someone else.
+            Click a node to see who owes what — and where each link breaks.
           </p>
         </motion.div>
 
@@ -399,7 +399,7 @@ export default function LiabilityChain() {
               fontStyle: 'italic',
             }}
           >
-            Each connector represents a handoff of responsibility, and a potential gap in accountability.
+            Every link is a handoff of responsibility — and a place where accountability can fall through.
           </p>
         </motion.div>
       </div>
