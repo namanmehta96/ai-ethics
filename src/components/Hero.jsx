@@ -115,7 +115,7 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* RESPONSIBLE? — outlined */}
+          {/* RESPONSIBLE? outlined */}
           <div style={{ overflow: 'hidden', lineHeight: 0.85 }}>
             <motion.div variants={word}>
               <span
@@ -153,8 +153,8 @@ export default function Hero() {
                 lineHeight: 1.6,
               }}
             >
-              When AI makes up facts, discriminates, and causes real harm —
-              who actually pays?
+              When AI makes up facts, discriminates, and causes real harm.
+              Who actually pays?
             </p>
           </motion.div>
         </motion.div>

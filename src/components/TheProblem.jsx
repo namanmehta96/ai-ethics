@@ -117,7 +117,7 @@ export default function TheProblem() {
             }}
           >
             AI now runs across healthcare, law, finance, and hiring. When it
-            fails, nobody is clearly on the hook — and victims are left with
+            fails, nobody is clearly on the hook, and victims are left with
             nowhere to turn.
           </p>
         </motion.div>

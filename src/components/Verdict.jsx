@@ -5,21 +5,21 @@ const recommendations = [
   {
     number: '01',
     title: 'Legislate a Duty to Signal Uncertainty',
-    body: 'The EU should require every GPAI model and deployer to signal how certain it is in high-stakes settings — legal, medical, financial, civic. This does not demand that AI be accurate, only that it be honest about its confidence: if a reasonable user would act on the output, it has to carry a warning.',
+    body: 'The EU should require every GPAI model and deployer to signal how certain it is in high-stakes settings: legal, medical, financial, and civic. This does not demand that AI be accurate, only that it be honest about its confidence. If a reasonable user would act on the output, it has to carry a warning.',
     source: 'Wachter, Mittelstadt & Russell (2024); EU AI Act Gap Analysis',
     urgent: true,
   },
   {
     number: '02',
     title: 'Mandatory, Named Accountability Chains',
-    body: 'Category-level accountability has to be backed by named individuals. Every consequential AI system should register an accountability officer, impact assessment, monitoring protocol, and incident pathway — Air Canada showed what happens when institutions are not anchored to a name.',
+    body: 'Category-level accountability has to be backed by named individuals. Every consequential AI system should register an accountability officer, impact assessment, monitoring protocol, and incident pathway. Air Canada showed what happens when institutions are not anchored to a name.',
     source: 'Microsoft Responsible AI Standard v2, Goals A1 & A5; EU AI Act Articles 16-29',
     urgent: true,
   },
   {
     number: '03',
     title: 'Close the Gap: EU AI Liability Directive Must Be Adopted',
-    body: 'The AI Liability Directive has to be adopted and extended to general-purpose AI harms, not just high-risk categories. The Product Liability Directive\'s "defect" definition needs to cover accuracy defects — outputs that create false impressions through hallucination or missing uncertainty signals — and the EU should set up a dedicated AI harm redress mechanism.',
+    body: 'The AI Liability Directive has to be adopted and extended to general-purpose AI harms, not just high-risk categories. The Product Liability Directive\'s "defect" definition needs to cover accuracy defects: outputs that create false impressions through hallucination or missing uncertainty signals. The EU should also set up a dedicated AI harm redress mechanism.',
     source: 'EU AI Liability Directive Draft (2022); Revised Product Liability Directive (2024); Wachter et al. (2024)',
     urgent: false,
   },
@@ -120,7 +120,7 @@ export default function Verdict() {
                     fontStyle: 'italic',
                   }}
                 >
-                  AI already speaks with the authority of experts — advising patients,
+                  AI already speaks with the authority of experts: advising patients,
                   informing jurors, screening applicants, comforting the grieving. With
                   no duty to tell the truth, no named owner, no redress when it fails.
                 </p>
@@ -135,7 +135,7 @@ export default function Verdict() {
                   }}
                 >
                   These cases are not accidents. They are what you get when the push
-                  to deploy outweighs the push to be careful — and three concrete fixes
+                  to deploy outweighs the push to be careful. Three concrete fixes
                   would change the math.
                 </p>
               </div>

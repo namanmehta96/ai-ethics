@@ -9,7 +9,7 @@ const nodes = [
     sublabel: 'OpenAI · Anthropic · Google DeepMind · Meta',
     color: '#C0392B',
     detail: {
-      role: 'Builds the base model — training data, architecture, fine-tuning, and safety guardrails.',
+      role: 'Builds the base model: training data, architecture, fine-tuning, and safety guardrails.',
       obligations: [
         'EU AI Act Article 53: GPAI providers must maintain technical documentation and publish training data summaries.',
         'Models with "systemic risk" (>10²⁵ FLOPs) face heightened obligations including adversarial testing and incident reporting.',
@@ -43,13 +43,13 @@ const nodes = [
     sublabel: 'Lawyers · Doctors · HR Managers · Journalists',
     color: '#C0392B',
     detail: {
-      role: 'The expert who folds AI output into professional decisions. Has the skills to double-check it — and often does not.',
+      role: 'The expert who folds AI output into professional decisions. Has the skills to double-check it, and often does not.',
       obligations: [
         'Professional codes of conduct (bar associations, medical boards) create duties of competence that extend to tool verification.',
         'Mata v. Avianca (2023): submitting AI-generated material without verification violated professional obligations.',
         'Lawyers sanctioned $5,000, setting precedent that professional responsibility applies to AI use.',
       ],
-      gap: 'Automation bias — trusting confident AI too much — erodes the habit of checking. Professional codes have not been rewritten for AI, so "reasonable verification" is still anyone\'s guess.',
+      gap: 'Automation bias, the habit of trusting confident AI too much, erodes careful checking. Professional codes have not been rewritten for AI, so "reasonable verification" is still anyone\'s guess.',
       verdict: 'On paper, professional codes apply. The New York lawyer case was a warning shot, not settled law.',
     },
   },
@@ -66,7 +66,7 @@ const nodes = [
         'Article 86 (high-risk systems): Right to explanation of individual decisions.',
         'GDPR Article 22: Right not to be subject to solely automated decisions with significant effects.',
       ],
-      gap: 'These rights exist on paper. In practice, disclosures are buried in terms of service — the applicants Amazon\'s AI cut never knew AI was involved.',
+      gap: 'These rights exist on paper. In practice, disclosures are buried in terms of service. The applicants Amazon\'s AI cut never knew AI was involved.',
       verdict: 'Least accountability, most harm. Legal rights exist but are practically unenforceable.',
     },
   },
@@ -138,7 +138,7 @@ export default function LiabilityChain() {
             }}
           >
             When AI causes harm, every player in the chain points to someone else.
-            Click a node to see who owes what — and where each link breaks.
+            Click a node to see who owes what, and where each link breaks.
           </p>
         </motion.div>
 
@@ -399,7 +399,7 @@ export default function LiabilityChain() {
               fontStyle: 'italic',
             }}
           >
-            Every link is a handoff of responsibility — and a place where accountability can fall through.
+            Every link is a handoff of responsibility, and a place where accountability can fall through.
           </p>
         </motion.div>
       </div>

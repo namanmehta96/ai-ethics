@@ -153,7 +153,7 @@ export default function CarelessSpeech() {
                 }}
               >
                 This is not lying on purpose, and it is not a random glitch. It is
-                a specific LLM failure mode that current law has not caught up with —
+                a specific LLM failure mode that current law has not caught up with,
                 even though Google autocomplete cases already showed AI speech can ground legal claims.
               </p>
             </div>

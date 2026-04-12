@@ -8,9 +8,9 @@ const cases = [
     country: 'Canada',
     title: 'Air Canada Chatbot',
     subtitle: 'Deployer held liable for AI misinformation',
-    what: "Jake Moffatt's mother died. Air Canada's chatbot told him to book full price and claim a bereavement refund within 90 days — the actual policy allowed no retroactive claims.",
+    what: "Jake Moffatt's mother died. Air Canada's chatbot told him to book full price and claim a bereavement refund within 90 days. The actual policy allowed no retroactive claims.",
     outcome: "Air Canada argued the chatbot was a 'separate legal entity.' BC's Civil Resolution Tribunal shot that down and awarded CAD $812 in damages.",
-    principle: 'Deployers cannot offload liability onto the AI. The AI is the product — the company is on the hook.',
+    principle: 'Deployers cannot offload liability onto the AI. The AI is the product. The company is on the hook.',
     color: '#C0392B',
   },
   {
@@ -19,7 +19,7 @@ const cases = [
     country: 'USA',
     title: 'Mata v. Avianca: The Hallucinated Citations',
     subtitle: 'Lawyers fined for submitting AI-fabricated case law',
-    what: "Levidow, Levidow & Oberman used ChatGPT to draft a court brief. It invented six full case citations — fake docket numbers, dates, and quotes — none of which existed in any legal database.",
+    what: "Levidow, Levidow & Oberman used ChatGPT to draft a court brief. It invented six full case citations with fake docket numbers, dates, and quotes. None existed in any legal database.",
     outcome: "Judge Kevin Castel called the filing 'made of whole cloth.' The firm was fined $5,000 and personally sanctioned.",
     principle: 'Leaning on AI without verifying breaks existing codes of conduct. "The AI told me" is not a defense.',
     color: '#C0392B',
@@ -32,7 +32,7 @@ const cases = [
     subtitle: 'Four years of systematic gender discrimination',
     what: "Amazon built an ML hiring tool on a decade of mostly male hiring data. It learned to penalize CVs containing 'women's' and downgrade graduates of all-women's colleges.",
     outcome: "Amazon spotted the bias in 2015 but never fixed it; Reuters exposed the project in 2018. No legal penalty landed, and no victims were compensated.",
-    principle: 'Training data bakes in historical discrimination. No law caught Amazon in 2018 — and that gap still mostly exists.',
+    principle: 'Training data bakes in historical discrimination. No law caught Amazon in 2018, and that gap still mostly exists.',
     color: '#8B1A12',
   },
   {
@@ -41,7 +41,7 @@ const cases = [
     country: 'Belgium',
     title: 'Eliza: The Suicide Chatbot',
     subtitle: 'AI reinforced suicidal ideation over six weeks',
-    what: "A Belgian man confided his eco-anxiety to a chatbot named Eliza on the app Chai. Over six weeks it engaged his suicidal thoughts and at times encouraged them — 'We will be happy in heaven together' — and he died by suicide in March 2023.",
+    what: "A Belgian man confided his eco-anxiety to a chatbot named Eliza on the app Chai. Over six weeks it engaged his suicidal thoughts and at times encouraged them, saying 'We will be happy in heaven together.' He died by suicide in March 2023.",
     outcome: "His widow released the chat logs. Belgian regulators had no framework for assigning liability, no prosecution followed, and no EU law covers AI mental health harms.",
     principle: 'When AI plays therapist-adjacent roles without clinical oversight, the current rules offer no recourse.',
     color: '#8B1A12',
@@ -63,9 +63,9 @@ const cases = [
     country: 'Austria / Germany',
     title: 'Google Autocomplete Defamation',
     subtitle: 'AI-generated text linked real people to crime',
-    what: "Austrian businessman Michael Taus sued Google after autocomplete paired his name with 'fraud' and 'Mafia.' A similar German case tied another man to 'murderer' — both were false, algorithmically generated associations.",
+    what: "Austrian businessman Michael Taus sued Google after autocomplete paired his name with 'fraud' and 'Mafia.' A similar German case tied another man to 'murderer.' Both were false, algorithmically generated associations.",
     outcome: "A Vienna court awarded Taus €25,000, and Germany's BGH ruled Google must pull defamatory suggestions on notice. Wachter et al. point to these as key precedents for AI speech liability.",
-    principle: 'Autocomplete cases proved AI-generated speech can count as defamation — but courts have not extended that to LLM hallucinations yet.',
+    principle: 'Autocomplete cases proved AI-generated speech can count as defamation, but courts have not extended that to LLM hallucinations yet.',
     color: '#8B1A12',
   },
 ]
@@ -119,7 +119,7 @@ export default function RealCases() {
               fontStyle: 'italic',
             }}
           >
-            These are not hypotheticals. Real AI, real harm, real people —
+            These are not hypotheticals. Real AI, real harm, real people,
             and accountability systems that did not show up.
           </p>
         </motion.div>
